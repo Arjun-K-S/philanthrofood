@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:forceDarkAllowed="false"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".activities.Otp">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="349dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="116dp"
+        android:text="Enter The Recieved OTP."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/otp_otp"
+        android:layout_width="311dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edit_text"
+        android:hint="Enter the OTP"
+        android:drawableLeft="@drawable/otp"
+        android:inputType="phone"
+        android:maxLength="4"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/otp_confirm_password"
+        android:layout_width="311dp"
+        android:layout_height="56dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/password_icon"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_password"
+        app:layout_constraintVertical_bias="0.092" />
+
+    <EditText
+        android:id="@+id/otp_password"
+        android:layout_width="311dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/edit_text"
+        android:drawableLeft="@drawable/password_icon"
+        android:hint="Enter Your New Password"
+        android:inputType="textPassword"
+        android:maxLength="20"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_otp" />
+
+    <Button
+        android:id="@+id/otp_change_password_button"
+        android:layout_width="210dp"
+        android:layout_height="52dp"
+        android:background="@drawable/btn"
+        android:text="Change Password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_confirm_password"
+        app:layout_constraintVertical_bias="0.282"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:id="@+id/otp_resent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resent OTP"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_change_password_button" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/otp_prgs"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/progress_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible">
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

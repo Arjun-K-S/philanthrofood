@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:forceDarkAllowed="false"
+    android:id="@+id/main_frg_swipe_refresh"
+    tools:context=".fragments.Main_Fragment">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frg_main_frame_layout">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_frg_appbar">
+            <EditText
+                android:id="@+id/main_search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:hint="Search Restaurants"
+                android:layout_weight="8"
+                android:background="@drawable/search_view"
+                android:textAlignment="center"
+                android:layout_marginLeft="12dp"
+                android:maxLength="30"
+                />
+        </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frg_main_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+        </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/frg_main_prgs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/white">
+        <ProgressBar
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/main_frg_no_net"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/no_net"
+        android:visibility="invisible"/>
+
+    </FrameLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
